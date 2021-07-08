@@ -1,0 +1,34 @@
+Sep 23, 2020 11:17:41 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Sep 23, 2020 11:17:41 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: init: Global resources are available
+Sep 23, 2020 11:17:41 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Sep 23, 2020 11:17:41 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Sep 23, 2020 11:17:42 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/Admin/AppData/Local/Temp/context17498559474756706054.xml'
+Sep 23, 2020 11:17:42 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application '/WebApplication1'
+Sep 23, 2020 11:30:40 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Sep 23, 2020 11:30:40 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Sep 23, 2020 11:30:40 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/Admin/AppData/Local/Temp/context10702404119792641107.xml'
+Sep 23, 2020 11:30:40 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application '/HelloWorld'
+Sep 23, 2020 11:32:03 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Sep 23, 2020 11:32:03 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Sep 23, 2020 11:32:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Sep 23, 2020 11:32:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: list: Listing contexts for virtual host 'localhost'
+Sep 23, 2020 11:32:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: undeploy: Undeploying web application at '/HelloWorld'
+Sep 23, 2020 11:32:23 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: install: Installing context configuration at 'file:/C:/Users/Admin/AppData/Local/Temp/context2948234717382659942.xml'
+Sep 23, 2020 11:32:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: Manager: start: Starting web application '/HelloWorld'

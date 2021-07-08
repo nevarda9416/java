@@ -1,0 +1,728 @@
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.106
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 16 2020 08:33:41 UTC
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.106.0
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 10
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.0
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk-13.0.1
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           13.0.1+9
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=D:\apache-tomcat-7.0.106\conf\logging.properties
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Admin
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\apache-tomcat-7.0.106
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\apache-tomcat-7.0.106
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=D:\apache-tomcat-7.0.106\temp
+Sep 23, 2020 10:54:20 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+Sep 23, 2020 10:54:20 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Sep 23, 2020 10:54:20 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+Sep 23, 2020 10:54:20 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 452 ms
+Sep 23, 2020 10:54:20 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Sep 23, 2020 10:54:20 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.106
+Sep 23, 2020 10:54:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\docs]
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\docs] has finished in [264] ms
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\examples]
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\examples] has finished in [300] ms
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager]
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager] has finished in [36] ms
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\manager]
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\manager] has finished in [34] ms
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT]
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT] has finished in [26] ms
+Sep 23, 2020 10:54:21 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 10:54:21 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 720 ms
+Sep 23, 2020 10:55:53 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 10:55:53 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 10:55:53 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 10:56:34 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:01:59 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Sep 23, 2020 11:01:59 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:01:59 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Sep 23, 2020 11:01:59 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:01:59 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.106
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 16 2020 08:33:41 UTC
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.106.0
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 10
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.0
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk-13.0.1
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           13.0.1+9
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=D:\apache-tomcat-7.0.106\conf\logging.properties
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Admin
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=D:\apache-tomcat-7.0.106\temp
+Sep 23, 2020 11:04:27 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+Sep 23, 2020 11:04:27 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Sep 23, 2020 11:04:27 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+Sep 23, 2020 11:04:27 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 352 ms
+Sep 23, 2020 11:04:27 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Sep 23, 2020 11:04:27 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.106
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\docs]
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\docs] has finished in [256] ms
+Sep 23, 2020 11:04:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\examples]
+Sep 23, 2020 11:04:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\examples] has finished in [189] ms
+Sep 23, 2020 11:04:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager]
+Sep 23, 2020 11:04:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager] has finished in [34] ms
+Sep 23, 2020 11:04:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\manager]
+Sep 23, 2020 11:04:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\manager] has finished in [40] ms
+Sep 23, 2020 11:04:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT]
+Sep 23, 2020 11:04:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT] has finished in [27] ms
+Sep 23, 2020 11:04:28 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:04:28 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 604 ms
+Sep 23, 2020 11:04:33 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:04:33 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:04:33 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:04:33 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:04:33 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:04:34 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:04:34 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:06:37 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Sep 23, 2020 11:06:37 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:37 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Sep 23, 2020 11:06:37 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:37 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.106
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 16 2020 08:33:41 UTC
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.106.0
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 10
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.0
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk-13.0.1
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           13.0.1+9
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=D:\apache-tomcat-7.0.106\conf\logging.properties
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Admin
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=D:\apache-tomcat-7.0.106\temp
+Sep 23, 2020 11:06:41 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+Sep 23, 2020 11:06:41 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Sep 23, 2020 11:06:41 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+Sep 23, 2020 11:06:41 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 352 ms
+Sep 23, 2020 11:06:41 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Sep 23, 2020 11:06:41 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.106
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\docs]
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\docs] has finished in [259] ms
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\examples]
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\examples] has finished in [190] ms
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager]
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager] has finished in [42] ms
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\manager]
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\manager] has finished in [37] ms
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT]
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT] has finished in [24] ms
+Sep 23, 2020 11:06:41 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:41 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 609 ms
+Sep 23, 2020 11:06:52 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Sep 23, 2020 11:06:52 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:52 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Sep 23, 2020 11:06:52 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:52 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.106
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 16 2020 08:33:41 UTC
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.106.0
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 10
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.0
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk-13.0.1
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           13.0.1+9
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=D:\apache-tomcat-7.0.106\conf\logging.properties
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Admin
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=D:\apache-tomcat-7.0.106\temp
+Sep 23, 2020 11:06:56 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+Sep 23, 2020 11:06:56 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Sep 23, 2020 11:06:56 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+Sep 23, 2020 11:06:56 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 355 ms
+Sep 23, 2020 11:06:56 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Sep 23, 2020 11:06:56 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.106
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\docs]
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\docs] has finished in [247] ms
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\examples]
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\examples] has finished in [199] ms
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager]
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager] has finished in [32] ms
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\manager]
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\manager] has finished in [30] ms
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT]
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT] has finished in [27] ms
+Sep 23, 2020 11:06:56 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:06:56 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 594 ms
+Sep 23, 2020 11:12:20 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:12:20 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:12:20 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:12:20 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:12:21 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:12:21 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:12:21 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:12:21 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user [admin]
+Sep 23, 2020 11:13:16 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Sep 23, 2020 11:13:16 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:13:16 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Sep 23, 2020 11:13:16 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:13:16 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.106
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 16 2020 08:33:41 UTC
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.106.0
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 10
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.0
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk-13.0.1
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           13.0.1+9
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=D:\apache-tomcat-7.0.106\conf\logging.properties
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Admin
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=D:\apache-tomcat-7.0.106\temp
+Sep 23, 2020 11:13:19 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+Sep 23, 2020 11:13:19 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Sep 23, 2020 11:13:19 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+Sep 23, 2020 11:13:19 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 352 ms
+Sep 23, 2020 11:13:19 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Sep 23, 2020 11:13:19 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.106
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\docs]
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\docs] has finished in [244] ms
+Sep 23, 2020 11:13:19 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\examples]
+Sep 23, 2020 11:13:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\examples] has finished in [192] ms
+Sep 23, 2020 11:13:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager]
+Sep 23, 2020 11:13:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager] has finished in [34] ms
+Sep 23, 2020 11:13:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\manager]
+Sep 23, 2020 11:13:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\manager] has finished in [31] ms
+Sep 23, 2020 11:13:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT]
+Sep 23, 2020 11:13:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT] has finished in [26] ms
+Sep 23, 2020 11:13:20 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:13:20 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 583 ms
+Sep 23, 2020 11:15:23 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Sep 23, 2020 11:15:23 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:15:23 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Sep 23, 2020 11:15:23 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:15:23 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.106
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 16 2020 08:33:41 UTC
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.106.0
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 10
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.0
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk-13.0.1
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           13.0.1+9
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=D:\apache-tomcat-7.0.106\conf\logging.properties
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Admin
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=D:\apache-tomcat-7.0.106\temp
+Sep 23, 2020 11:15:26 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+Sep 23, 2020 11:15:26 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Sep 23, 2020 11:15:26 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+Sep 23, 2020 11:15:26 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 354 ms
+Sep 23, 2020 11:15:26 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Sep 23, 2020 11:15:26 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.106
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\docs]
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\docs] has finished in [249] ms
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\examples]
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\examples] has finished in [200] ms
+Sep 23, 2020 11:15:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager]
+Sep 23, 2020 11:15:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager] has finished in [34] ms
+Sep 23, 2020 11:15:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\manager]
+Sep 23, 2020 11:15:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\manager] has finished in [33] ms
+Sep 23, 2020 11:15:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT]
+Sep 23, 2020 11:15:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT] has finished in [25] ms
+Sep 23, 2020 11:15:27 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:15:27 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 599 ms
+Sep 23, 2020 11:17:31 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Sep 23, 2020 11:17:31 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:17:31 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Sep 23, 2020 11:17:31 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:17:31 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version name:   Apache Tomcat/7.0.106
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 16 2020 08:33:41 UTC
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version number: 7.0.106.0
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 10
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            10.0
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk-13.0.1
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           13.0.1+9
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=D:\apache-tomcat-7.0.106\conf\logging.properties
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Admin
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dignore.endorsed.dirs=
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\apache-tomcat-7.0.106
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=D:\apache-tomcat-7.0.106\temp
+Sep 23, 2020 11:17:34 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+Sep 23, 2020 11:17:34 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Sep 23, 2020 11:17:34 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFO: OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+Sep 23, 2020 11:17:34 AM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 352 ms
+Sep 23, 2020 11:17:34 AM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Sep 23, 2020 11:17:34 AM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.106
+Sep 23, 2020 11:17:34 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\docs]
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\docs] has finished in [245] ms
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\examples]
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\examples] has finished in [194] ms
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager]
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\host-manager] has finished in [37] ms
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\manager]
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\manager] has finished in [38] ms
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT]
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory [D:\apache-tomcat-7.0.106\webapps\ROOT] has finished in [27] ms
+Sep 23, 2020 11:17:35 AM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:17:35 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 598 ms
+Sep 23, 2020 11:17:42 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying deployment descriptor [D:\apache-tomcat-7.0.106\conf\Catalina\localhost\WebApplication1.xml]
+Sep 23, 2020 11:17:42 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of deployment descriptor [D:\apache-tomcat-7.0.106\conf\Catalina\localhost\WebApplication1.xml] has finished in [44] ms
+Sep 23, 2020 11:17:42 AM org.apache.catalina.util.LifecycleBase start
+INFO: The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication1]] after start() had already been called. The second call will be ignored.
+Sep 23, 2020 11:30:40 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:30:40 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:30:40 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:30:40 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying deployment descriptor [D:\apache-tomcat-7.0.106\conf\Catalina\localhost\HelloWorld.xml]
+Sep 23, 2020 11:30:40 AM org.apache.catalina.deploy.WebXml setVersion
+WARNING: Unknown version string [3.1]. Default version will be used.
+Sep 23, 2020 11:30:40 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of deployment descriptor [D:\apache-tomcat-7.0.106\conf\Catalina\localhost\HelloWorld.xml] has finished in [43] ms
+Sep 23, 2020 11:30:40 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:30:40 AM org.apache.catalina.util.LifecycleBase start
+INFO: The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/HelloWorld]] after start() had already been called. The second call will be ignored.
+Sep 23, 2020 11:32:03 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:32:03 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:32:23 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:32:23 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:32:23 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:32:23 AM org.apache.catalina.startup.HostConfig undeploy
+INFO: Undeploying context [/HelloWorld]
+Sep 23, 2020 11:32:23 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:32:23 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying deployment descriptor [D:\apache-tomcat-7.0.106\conf\Catalina\localhost\HelloWorld.xml]
+Sep 23, 2020 11:32:23 AM org.apache.catalina.deploy.WebXml setVersion
+WARNING: Unknown version string [3.1]. Default version will be used.
+Sep 23, 2020 11:32:24 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deployment of deployment descriptor [D:\apache-tomcat-7.0.106\conf\Catalina\localhost\HelloWorld.xml] has finished in [39] ms
+Sep 23, 2020 11:32:24 AM org.apache.catalina.realm.LockOutRealm filterLockedAccounts
+WARNING: An attempt was made to authenticate the locked user []
+Sep 23, 2020 11:32:24 AM org.apache.catalina.util.LifecycleBase start
+INFO: The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/HelloWorld]] after start() had already been called. The second call will be ignored.
+Sep 23, 2020 11:50:19 AM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Sep 23, 2020 11:50:19 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:50:19 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Sep 23, 2020 11:50:19 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-apr-8081"]
+Sep 23, 2020 11:50:19 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-apr-8081"]

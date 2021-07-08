@@ -1,0 +1,12 @@
+com\mycompany\helloworld\LoginServlet.class
+com\mycompany\user\ListUserServlet.class
+com\mycompany\user\DeleteServlet.class
+com\mycompany\helloworld\ContactServlet.class
+models\User.class
+com\mycompany\user\UpdateUserServlet.class
+com\mycompany\helloworld\RegisterServlet.class
+com\mycompany\helloworld\UserServlet.class
+com\mycompany\helloworld\HistoryServlet.class
+com\mycompany\user\AddUserServlet.class
+com\mycompany\helloworld\HomeServlet.class
+com\mycompany\helloworld\WelcomeServlet.class
