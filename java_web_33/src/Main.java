@@ -1,14 +1,21 @@
 public class Main {
-    int x = 15;
-    int y = 3;
-    
-    public static boolean stupid = false;
+    // Static method
+    public static void myStaticMethod() {
+        System.out.println("Static methods can be called without creating objects");
+    }
+    // Public method
+    public void myPublicMethod() {
+        System.out.println("Public nethods must be called by creating objects");
+    }
+    public void fullThrottle() {
+        System.out.println("The car is going as fast as it can!");
+    }
+    public void speed(int maxSpeed) {
+        System.out.println("Max speed is: " + maxSpeed);
+    }
     public static void main(String[] args) {
-        System.out.println("Hello world! Stupid is " + stupid);
-        Main myObj1 = new Main(); // Object 1
-        myObj1.x = 5353;
-        Main myObj2 = new Main(); // Object 2
-        System.out.println(myObj1.x);
-        System.out.println(myObj2.x);
+        myStaticMethod(); // Call the static method
+        Main myObj = new Main(); // Create an object of Main
+        myObj.myPublicMethod(); // Call the public method on the object
     }
 }
