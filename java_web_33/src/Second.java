@@ -1,7 +1,14 @@
 public class Second {
+    int modelYear;
+    String modelName;
+
+    public Second(int year, String name) {
+        modelYear = year;
+        modelName = name;
+    }
+
     public static void main(String[] args) {
-        Main myCar = new Main(); // Create a myCar object
-        myCar.fullThrottle(); // Call the fullThrottle() method
-        myCar.speed(200); // Call the speed() method
+        Second myCar = new Second(1969, "Mustang"); // Create a myCar object
+        System.out.println(myCar.modelYear + " " + myCar.modelName);
     }
 }
