@@ -8,7 +8,10 @@ public class Second {
     }
 
     public static void main(String[] args) {
-        Second myCar = new Second(1969, "Mustang"); // Create a myCar object
-        System.out.println(myCar.modelYear + " " + myCar.modelName);
+        Student myObj = new Student(); // Create a myCar object
+        System.out.println("Name: " + myObj.fname);
+        System.out.println("Age: " + myObj.age);
+        System.out.println("Graduation Year: " + myObj.graduationYear);
+        myObj.study();
     }
 }
