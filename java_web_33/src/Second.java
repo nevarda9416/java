@@ -49,5 +49,8 @@ public class Second {
                 System.out.println(myNumbers[i][j]);
             }
         }
+        Person myPerson = new Person();
+        myPerson.setName("John Wick 4"); // Set the value of the name variable to "John"
+        System.out.println(myPerson.getName());
     }
 }
