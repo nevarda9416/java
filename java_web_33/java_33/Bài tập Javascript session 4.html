@@ -1,8 +1,20 @@
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bài tập Javascript session 4</title>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        label {
+            width: 100%;
+        }
+        .error {
+            display: none;
+            color: red;
+        }
+    </style>
 </head>
 <body>
 <div id="array"></div>
@@ -18,6 +30,37 @@
 </p>
 <p><a onclick="load(this)" href="javascript:void(0)">https://c1.staticflickr.com/5/4126/5014409129_a34e7856bf_b.jpg</a>
 </p>
+<div class="container">
+    <h2>Sign Up</h2>
+    <form action="/action_page.php">
+        <div class="form-group">
+            <label for="username">Username:
+                <input type="text" class="form-control" id="username" placeholder="Enter username" name="username"/>
+                <i class="error error_username">(*) Vui lòng điền vào trường này</i>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                       name="pwd"/>
+                <i class="error error_pwd">(*) Vui lòng điền vào trường này</i>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"/>
+                <i class="error error_email">(*) Vui lòng điền vào trường này</i>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="fullname">Full Name:
+                <input type="text" class="form-control" id="fullname" placeholder="Enter full name" name="fullname"/>
+                <i class="error error_fullname">(*) Vui lòng điền vào trường này</i>
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>
 <script>
     /**
      * 1. Viết chuơng trình định nghĩa một mảng số nguyên bất kì, kiểm tra xem trong mảng có bao nhiêu số chẵn, bao nhiêu số lẻ và in ra trình duyệt
@@ -60,7 +103,7 @@
         "This is paragraph 3",
         "This is paragraph 4",
         "This is paragraph 5"
-    ]
+    ];
     for (let i = 0; i < mang.length; i++) {
         $('#wrapper').append('<p>' + mang[i] + '</p>');
     }
@@ -71,7 +114,6 @@
         let htmlWrapper = $('#wrapper').html();
         $('#copy-wrapper').html(htmlWrapper);
     });
-
     /**
      * 6. Khi click vào mỗi thẻ <a>, load ảnh vào thẻ <image> có id=”image”
      */
@@ -79,35 +121,54 @@
         console.log(image);
         $('#image').attr('src', image.innerHTML);
     }
-
     /**
      * 7. Tạo form đăng nhập và validate
      */
-    <h2>Sign Up</h2>
-    <form action="/action_page.php">
-        <div className="form-group">
-            <label form="username">Username:
-                <input type="text" className="form-control" id="username" placeholder="Enter username" name="username"/>
-            </label>
-        </div>
-        <div className="form-group">
-            <label form="pwd">Password:
-                <input type="password" className="form-control" id="pwd" placeholder="Enter password"
-                       name="pwd"/></label>
-        </div>
-        <div className="form-group">
-            <label form="email">Email:
-                <input type="email" className="form-control" id="email" placeholder="Enter email" name="email"/></label>
-        </div>
-        <div className="form-group">
-            <label form="fullname">FullName:
-                <input type="text" className="form-control" id="fullname" placeholder="Enter fullname" name="fullname"/></label>
-        </div>
-        <div className="checkbox">
-            <label><input type="checkbox" name="remember"/> Remember me</label>
-        </div>
-        <button type="submit" className="btn btn-default">Submit</button>
-    </form>
+    $('form').submit(function (e) {
+        let username = $('#username').val();
+        if (username.length > 0) {
+            if (username.length > 5 && username.length < 10) {
+                $('.error_username').css('display', 'none');
+            } else {
+                $('.error_username').text('(*) Username chiều dài phải lớn hơn 5 và nhỏ hơn 10').css('display', 'inline-block');
+                e.preventDefault();
+            }
+        } else {
+            $('.error_username').text('(*) Vui lòng điền vào trường này').css('display', 'inline-block');
+            e.preventDefault();
+        }
+        let pwd = $('#pwd').val();
+        if (pwd.length > 0) {
+            if (pwd.length > 5 && pwd.length < 10) {
+                $('.error_pwd').css('display', 'none');
+            } else {
+                $('.error_pwd').text('(*) Password chiều dài phải lớn hơn 5 và nhỏ hơn 10').css('display', 'inline-block');
+                e.preventDefault();
+            }
+        } else {
+            $('.error_pwd').text('(*) Vui lòng điền vào trường này').css('display', 'inline-block');
+            e.preventDefault();
+        }
+        let email = $('#email').val();
+        if (email.length > 0) {
+            $('.error_email').css('display', 'none');
+        } else {
+            $('.error_email').css('display', 'inline-block');
+            e.preventDefault();
+        }
+        let fullname = $('#fullname').val();
+        if (fullname.length > 0) {
+            if (fullname.length > 5 && fullname.length < 10) {
+                $('.error_fullname').css('display', 'none');
+            } else {
+                $('.error_fullname').text('(*) Full Name chiều dài phải lớn hơn 5 và nhỏ hơn 10').css('display', 'inline-block');
+                e.preventDefault();
+            }
+        } else {
+            $('.error_fullname').text('(*) Vui lòng điền vào trường này').css('display', 'inline-block');
+            e.preventDefault();
+        }
+    });
 </script>
 </body>
 </html>
