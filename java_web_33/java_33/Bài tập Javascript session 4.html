@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <title>Bài tập Javascript session 4</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="array"></div>
+<div id="wrapper"></div>
+<div id="copy-wrapper"></div>
+<p>
+    <button id="btn">Copy</button>
+</p>
+<img id="image" src="" alt=""/>
+<p><a onclick="load(this)" href="javascript:void(0)">https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?auto=compress&cs=tinysrgb&h=350</a>
+</p>
+<p><a onclick="load(this)" href="javascript:void(0)">https://estaticos.qdq.com/swdata/photos/719/719902669/Naturaleza_Fondo-de-pantalla-Naturaleza-103.jpg</a>
+</p>
+<p><a onclick="load(this)" href="javascript:void(0)">https://c1.staticflickr.com/5/4126/5014409129_a34e7856bf_b.jpg</a>
+</p>
+<script>
+    /**
+     * 1. Viết chuơng trình định nghĩa một mảng số nguyên bất kì, kiểm tra xem trong mảng có bao nhiêu số chẵn, bao nhiêu số lẻ và in ra trình duyệt
+     * @type {string}
+     */
+    /**
+     * The shortest approach (ES6)
+     * randomly generated N = lengthInteger array 0 <= A[lengthInteger] <= lengthInteger - 1
+     * @type {string}
+     */
+    let lengthInteger = prompt("Bạn hãy nhập vào số lượng số nguyên bất kì");
+    let arrayInteger = Array.from({length: lengthInteger}, () => Math.ceil(Math.random() * lengthInteger));
+    console.log(arrayInteger);
+    $('#array').append('Mảng random: <b>' + arrayInteger + '</b><br/>');
+    for (let i = 0; i < arrayInteger.length; i++) {
+        if (arrayInteger[i] % 2 === 0)
+            $('#result').append('Số chẵn: <b>' + arrayInteger[i] + '</b><br/>');
+        else
+            $('#result').append('Số lẻ: <b>' + arrayInteger[i] + '</b><br/>');
+    }
+    /**
+     * 2. Cho một mảng số nguyên bất kì, sắp xếp mảng theo giá trị tăng dần (sử dụng bất kì thuật toán nào bạn muốn)
+     */
+    arrayInteger.sort((a, b) => a - b);
+    console.log(arrayInteger);
+    $('#array').append('Mảng được sắp xếp tăng dần: <b>' + arrayInteger + '</b><br/>');
+    /**
+     * 3. Viết chuơng trình hiện thị thời gian của máy tính sử dụng đối tuợng Date() của javascript và hiển thị ra trình duyệt
+     */
+    const date = new Date();
+    console.log('Thời gian của máy tính: ' + date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' '
+        + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+    $('#array').append('Thời gian của máy tính: <b>' + Date() + '</b><br/>');
+    /**
+     * 4. Lấy dữ liệu từ mảng và đưa vào trong thẻ <p>, sau đó đưa vào trong thẻ div có id là                   wrapper
+     */
+    var mang = [
+        "This is paragraph 1",
+        "This is paragraph 2",
+        "This is paragraph 3",
+        "This is paragraph 4",
+        "This is paragraph 5"
+    ]
+    for (let i = 0; i < mang.length; i++) {
+        $('#wrapper').append('<p>' + mang[i] + '</p>');
+    }
+    /**
+     * 5. Lấy child trong thẻ <div> có id=”wrapper” và đưa vào thẻ <div> có id=”copy-wrapper” khi nhấn nút có id “btn”
+     */
+    $('#btn').click(function () {
+        let htmlWrapper = $('#wrapper').html();
+        $('#copy-wrapper').html(htmlWrapper);
+    });
+
+    /**
+     * 6. Khi click vào mỗi thẻ <a>, load ảnh vào thẻ <image> có id=”image”
+     */
+    function load(image) {
+        console.log(image);
+        $('#image').attr('src', image.innerHTML);
+    }
+
+    /**
+     * 7. Tạo form đăng nhập và validate
+     */
+    <h2>Sign Up</h2>
+    <form action="/action_page.php">
+        <div className="form-group">
+            <label form="username">Username:
+                <input type="text" className="form-control" id="username" placeholder="Enter username" name="username"/>
+            </label>
+        </div>
+        <div className="form-group">
+            <label form="pwd">Password:
+                <input type="password" className="form-control" id="pwd" placeholder="Enter password"
+                       name="pwd"/></label>
+        </div>
+        <div className="form-group">
+            <label form="email">Email:
+                <input type="email" className="form-control" id="email" placeholder="Enter email" name="email"/></label>
+        </div>
+        <div className="form-group">
+            <label form="fullname">FullName:
+                <input type="text" className="form-control" id="fullname" placeholder="Enter fullname" name="fullname"/></label>
+        </div>
+        <div className="checkbox">
+            <label><input type="checkbox" name="remember"/> Remember me</label>
+        </div>
+        <button type="submit" className="btn btn-default">Submit</button>
+    </form>
+</script>
+</body>
+</html>
