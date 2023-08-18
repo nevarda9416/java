@@ -1,26 +1,26 @@
 /**
- * Abstract class: is the process of hiding certain details and showing only essential information to the user
- * Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter)
- * The abstract keyword is a non-access modifier, used for classes and methods:
- * - Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be interited from another class)
- * - Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from)
- * An abstract class can have both abstract and regular methods
+ * Another way to achieve abstraction in Java, is with interfaces
+ * Interface is a completely "abstract class" that is used to group related methods with empty bodies
  */
-abstract class Animal2 {
-    // Abstract method (does not have a body)
-    public abstract void animalSound();
-    // Regular method
-    public void sleep() {
-        System.out.println("Zzz");
-    }
+interface Animal2 {
+    public void animalSound(); // interface method (does not have a body)
+
+    public void sleep(); // interface method (does not have a body)
 }
-// Subclass (inherit from Animal)
-class Pig2 extends Animal2 {
+
+// Pig implements the Animal interface
+class Pig2 implements Animal2 {
     public void animalSound() {
         // The body of animalSound() is provided here
         System.out.println("The pig says: wee wee");
     }
+
+    public void sleep() {
+        // The body of sleep() is provided here
+        System.out.println("Zzz");
+    }
 }
+
 class Main {
     public static void main(String[] args) {
         Pig2 myPig = new Pig2(); // Create a Pig object
