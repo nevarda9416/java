@@ -8,11 +8,6 @@ public class Second {
     }
 
     public static void main(String[] args) {
-        Student myObj = new Student(); // Create a myCar object
-        System.out.println("Name: " + myObj.fname);
-        System.out.println("Age: " + myObj.age);
-        System.out.println("Graduation Year: " + myObj.graduationYear);
-        myObj.study();
         /**
          * Java Type Casting: 2 types
          * Widening Casting (automatically) - converting a smaller type to a larger type size:
