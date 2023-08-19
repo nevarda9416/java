@@ -1,5 +1,4 @@
-import java.util.Collections;
-import java.util.HashMap; // import the HashMap class
+import java.util.HashSet; // import the HashSet class
 
 /**
  * How the LinkedList works?
@@ -9,40 +8,35 @@ import java.util.HashMap; // import the HashMap class
  */
 class Main {
     public static void main(String[] args) {
-        // Create a HashMap object called capitalCities
-        HashMap<String, String> capitalCities = new HashMap<String, String>();
-        // Add keys and values (Country, City) = Redis (cache)
-        capitalCities.put("England", "London");
-        capitalCities.put("Germany", "Berlin");
-        capitalCities.put("Norway", "Oslo");
-        capitalCities.put("USA", "Washington DC");
-        capitalCities.remove("Germany");
-        System.out.println(capitalCities);
-        System.out.println(capitalCities.get("USA"));
-        System.out.println(capitalCities.size());
-        // Loop through a HashMap
-        // Print keys
-        for (String i : capitalCities.keySet()) {
+        HashSet<String> cars = new HashSet<String>();
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.clear();
+        cars.add("Ford");
+        // Even though BMW is added twice below, it only appears once in the set because every item in a set has to be unique
+        cars.add("BMW");
+        cars.add("Mazda");
+        System.out.println(cars.contains("Mazda"));
+        cars.remove("Mazda");
+        System.out.println(cars.size());
+        System.out.println(cars);
+        // Loop Through a HashSet
+        for (String i : cars) {
             System.out.println(i);
         }
-        // Print values
-        for (String i : capitalCities.values()) {
-            System.out.println(i);
-        }
-        // Print keys and values
-        for (String i : capitalCities.keySet()) {
-            System.out.println("key: " + i + ", value: " + capitalCities.get(i));
-        }
-        capitalCities.clear();
-        System.out.println(capitalCities);
-        // Create a HashMap object called people
-        HashMap<String, Integer> people = new HashMap<String, Integer>();
-        // Add keys and values (Name, Age)
-        people.put("John", 32);
-        people.put("Steve", 30);
-        people.put("Angie", 33);
-        for (String i : people.keySet()) {
-            System.out.println("key: " + i + ", value: " + people.get(i));
+        // Create a HashSet object called numbers
+        HashSet<Integer> numbers = new HashSet<Integer>();
+        // Add values to the set
+        numbers.add(4);
+        numbers.add(7);
+        numbers.add(8);
+        // Show which numbers between 1 and 10 are in the set
+        for (int i = 1; i <= 10; i++) {
+            if (numbers.contains(i)) {
+                System.out.println(i + " was found in the set.");
+            } else {
+                System.out.println(i + " was not found in the set.");
+            }
         }
     }
 }
