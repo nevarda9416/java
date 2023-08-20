@@ -22,13 +22,7 @@ class Main {
         numbers.add(8);
         numbers.add(2);
         numbers.add(23);
-        Iterator<Integer> it2 = numbers.iterator();
-        while (it2.hasNext()) {
-            Integer i = it2.next();
-            if (i < 13) {
-                it2.remove();
-            }
-        }
+        numbers.removeIf(i -> i < 13);
         System.out.println(numbers);
     }
 }
