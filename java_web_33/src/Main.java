@@ -1,20 +1,22 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * We can import java.util.regex package to work with regular expressions.
+ * The package includes the following classes:
+ * - Pattern Class: Defines a pattern (to be used in a search)
+ * - Matcher Class: Used to search for the pattern
+ * - PatternSyntaxException Class: Indicates syntax error in a regular expression pattern
+ */
 class Main {
-    public static void checkAge(int age) {
-        if (age < 18) {
-            throw new ArithmeticException("Access denied - You must be at least 18 years old.");
-        } else {
-            System.out.println("Access granted - You are old enough!");
-        }
-    }
     public static void main(String[] args) {
-        try {
-            int[] myNumbers = {1, 2, 3};
-            System.out.println(myNumbers[10]);
-        } catch (Exception e) {
-            System.out.println("Something went wrong.");
-        } finally {
-            System.out.println("The 'try catch' is finished.");
+        Pattern pattern = Pattern.compile("w3schools", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher("Visit W2Schools!");
+        boolean matchFound = matcher.find();
+        if (matchFound) {
+            System.out.println("Match found");
+        } else {
+            System.out.println("Match not found");
         }
-        checkAge(15); // Set age to 15 (which is below 18...)
     }
 }
