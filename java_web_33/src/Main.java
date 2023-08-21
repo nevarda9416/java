@@ -1,28 +1,20 @@
-import java.util.ArrayList; // import the ArrayList class
-import java.util.Iterator;
-
+/**
+ * Since you're now working with objects, you can use certain methods to get information about the specific object
+ * For example, the following methods are used to get the value associated with the corresponding wrapper object:
+ * intValue(), byteValue(), shortValue(), longValue(), floatValue(), doubleValue(), charValue() and booleanValue()
+ */
 class Main {
     public static void main(String[] args) {
-        // Make a collection
-        ArrayList<String> cars = new ArrayList<String>();
-        cars.add("Volvo");
-        cars.add("BMW");
-        cars.add("Ford");
-        cars.add("Mazda");
-        // Get the iterator
-        Iterator<String> it = cars.iterator();
-        // Print the first item
-        System.out.println(it.next());
-        // Looping through a Collection
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(12);
-        numbers.add(8);
-        numbers.add(2);
-        numbers.add(23);
-        numbers.removeIf(i -> i < 13);
-        System.out.println(numbers);
+        Integer myInt = 5;
+        Double myDouble = 5.99;
+        Character myChar = 'A';
+        System.out.println(myInt.intValue());
+        System.out.println(myDouble.doubleValue());
+        System.out.println(myChar.charValue());
+        /**
+         * Another useful method is the toString() method, which is used to convert wrapper objects to strings
+         */
+        String myString = myInt.toString();
+        System.out.println(myString);
     }
 }
