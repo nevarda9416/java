@@ -4,20 +4,43 @@ import java.util.Scanner;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        System.out.print("Nhap vao mot so: ");
-        Scanner scanner = new Scanner(System.in); // khởi tạo 1 đối tượng
-        Integer input_number = Integer.valueOf(scanner.nextLine());
-        System.out.print("So vua nhap la: " + input_number + "\n");
-
-        System.out.print("Nhap vao ho ten: ");
-        String name = scanner.nextLine();
-        System.out.printf("Ten vua nhap la %s", name + "\n");
-
-        int a, b;
-        a = 10;
-        b = (a == 1) ? 20 : 30;
-        System.out.println("Value of b is: " + b);
-        b = (a == 10) ? 20 : 30;
-        System.out.println("Value of b is: " + b);
+        Scanner scanner = new Scanner(System.in);
+        int num = 6;
+        while (num == 6) {
+            System.out.println("da thuc hien");
+            num++;
+        }
+        boolean check = true;
+        int number;
+        do {
+            System.out.println("Nhap vao 1 so bat ki");
+            number = Integer.parseInt(scanner.nextLine());
+            if (number > 5) {
+                check = false;
+                System.out.println("Ket thuc chuong trinh");
+            }
+        } while (check);
+        int a = number;
+        switch (a) {
+            case 2:
+                System.out.println("So nhap vao la 2");
+                break;
+            case 3:
+                System.out.println("So nhap vao la 3");
+                break;
+            case 5:
+                System.out.println("So nhap vao la 5");
+                break;
+            default:
+                System.out.println("So nhap vao lon hon 5");
+                break;
+        }
+        if (a == 5) {
+            System.out.println("Gia tri bang 5");
+        } else if (a > 5) {
+            System.out.println("Gia tri lon hon 5");
+        } else {
+            System.out.println("Gia tri nho hon 5");
+        }
     }
 }
