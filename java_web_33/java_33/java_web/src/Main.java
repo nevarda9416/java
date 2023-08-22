@@ -1,3 +1,4 @@
+import javax.management.MBeanRegistration;
 import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -5,42 +6,36 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int num = 6;
-        while (num == 6) {
-            System.out.println("da thuc hien");
-            num++;
-        }
         boolean check = true;
-        int number;
-        do {
-            System.out.println("Nhap vao 1 so bat ki");
-            number = Integer.parseInt(scanner.nextLine());
-            if (number > 5) {
-                check = false;
-                System.out.println("Ket thuc chuong trinh");
+        //1. them moi sinh vien
+        //2. tim kiem sinh vien
+        //3. xoa sinh vien
+        //4. thong ke
+        while (check) {
+            System.out.println("1. Them moi sinh vien");
+            System.out.println("2. Tim kiem sinh vien");
+            System.out.println("3. Xoa sinh vien");
+            System.out.println("4. Thong ke sinh vien");
+            System.out.println("Moi ban chon chuc nang");
+            int select = Integer.parseInt(scanner.nextLine());
+            switch (select) {
+                case 1:
+                    System.out.println("Ban da chon chuc nang 1");
+                    break;
+                case 2:
+                    System.out.println("Ban da chon chuc nang 2");
+                    break;
+                case 3:
+                    System.out.println("Ban da chon chuc nang 3");
+                    break;
+                case 4:
+                    System.out.println("Ban da chon chuc nang 4");
+                    break;
+                default:
+                    System.out.println("Vui long nhap vao tu 1 -> 4. Chuong trinh se tu dong thoat");
+                    check = false;
+                    break;
             }
-        } while (check);
-        int a = number;
-        switch (a) {
-            case 2:
-                System.out.println("So nhap vao la 2");
-                break;
-            case 3:
-                System.out.println("So nhap vao la 3");
-                break;
-            case 5:
-                System.out.println("So nhap vao la 5");
-                break;
-            default:
-                System.out.println("So nhap vao lon hon 5");
-                break;
-        }
-        if (a == 5) {
-            System.out.println("Gia tri bang 5");
-        } else if (a > 5) {
-            System.out.println("Gia tri lon hon 5");
-        } else {
-            System.out.println("Gia tri nho hon 5");
         }
     }
 }
