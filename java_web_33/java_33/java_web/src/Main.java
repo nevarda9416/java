@@ -1,4 +1,3 @@
-import javax.management.MBeanRegistration;
 import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -11,6 +10,20 @@ public class Main {
         //2. tim kiem sinh vien
         //3. xoa sinh vien
         //4. thong ke
+        // Foreach: First in, first out
+        int[] number_arr = new int[6];
+        number_arr[0] = 2;
+        number_arr[1] = 3;
+        number_arr[2] = 4;
+        number_arr[3] = 5;
+        for (int i = 0; i < number_arr.length; i++) {
+            if (number_arr[i] == 4) continue;
+            System.out.println(number_arr[i]);
+        }
+        for (int num : number_arr) {
+            if (num == 4) continue;
+            System.out.println(num);
+        }
         while (check) {
             System.out.println("1. Them moi sinh vien");
             System.out.println("2. Tim kiem sinh vien");
