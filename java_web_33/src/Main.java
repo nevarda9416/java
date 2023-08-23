@@ -1,25 +1,17 @@
-// Java program to show multiple
-// Type parameters in Java Generics
-// We use < > to specify Parameter type
-class Test<T, U> {
-    T obj1; // An object of type T
-    U obj2; // An object of type U
-    // constructor
-    Test(T obj1, U obj2) {
-        this.obj1 = obj1;
-        this.obj2 = obj2;
-    }
-    // To print objects of T and U
-    public void print() {
-        System.out.println(obj1);
-        System.out.println(obj2);
-    }
-}
-// Driver class to test above
+// Java program to show working of user defined
+// Generic functions
 class Main extends Thread {
+    // A generic method example
+    static <T> void genericDisplay(T element)
+    {
+        System.out.println(element.getClass().getName() + " = " + element);
+    }
     public static void main(String[] args) {
-        // instance of Integer type
-        Test<String, Integer> obj = new Test<String, Integer>("GfG", 15);
-        obj.print();
+        // Calling generic method with Integer argument
+        genericDisplay(11);
+        // Calling generic method with String argument
+        genericDisplay("GeeksForGeeks");
+        // Calling generic method with double argument
+        genericDisplay(1.0);
     }
 }
