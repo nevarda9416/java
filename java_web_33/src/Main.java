@@ -1,17 +1,23 @@
-import java.util.ArrayList;
-import java.util.function.Consumer;
-interface StringFunction {
-    String run(String str);
+class Test<T> {
+    // An object of type T is declared
+    T obj;
+
+    Test(T obj) {
+        this.obj = obj;
+    }//constructor
+
+    public T getObject() {
+        return this.obj;
+    }
 }
+
 class Main extends Thread {
     public static void main(String[] args) {
-        StringFunction exclaim = (s) -> s + "!";
-        StringFunction ask = (s) -> s + "?";
-        printFormatted("Hello", exclaim);
-        printFormatted("Hello", ask);
-    }
-    public static void printFormatted(String str, StringFunction format) {
-        String result = format.run(str);
-        System.out.println(result);
+        // instance of Integer type
+        Test<Integer> iObj = new Test<Integer>(15);
+        System.out.println(iObj.getObject());
+        // instance of String type
+        Test<String> sObj = new Test<String>("GeeksForGeeks");
+        System.out.println(sObj.getObject());
     }
 }
