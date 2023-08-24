@@ -1,26 +1,28 @@
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        String str = "Hãy viết một câu truy vấn để đếm số lượng đơn hàng mà mỗi khách hàng đã đặt";
-        String str_remove_space = str.replaceAll(" ", "");
-        String arr_str[] = new String[str_remove_space.length()];
-        for (int i = 0; i < str_remove_space.length(); i++) {
-            arr_str[i] = String.valueOf(str_remove_space.charAt(i));
-        }
-        StringBuilder builder = new StringBuilder();
-        int dem = 1;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhap so luong ten: ");
+        int amount = Integer.parseInt(scanner.nextLine());
+        String[] arr_str = new String[amount];
+        System.out.println("Nhap danh sach ten");
         for (int i = 0; i < arr_str.length; i++) {
-            if (!builder.toString().contains(arr_str[i])) {
-                builder.append(arr_str[i]);
-                for (int j = i + 1; j < arr_str.length; j++) {
-                    if (arr_str[i].equals(arr_str[j])) {
-                        dem++;
-                    }
-                }
-                System.out.println("Chu " + arr_str[i] + " xuat hien " + dem + " lan");
-                dem = 1;
+            System.out.print("Ten thu " + (i + 1) + " la: ");
+            String name = scanner.nextLine();
+            arr_str[i] = name;
+        }
+        System.out.print("Nhap ten tim kiem: ");
+        String searchName = scanner.nextLine();
+        for (String s : arr_str) {
+            if (s.equals(searchName)) {
+                System.out.println("Ten " + searchName + " co trong danh sach");
+            } else {
+                System.out.println("Ten " + searchName + " khong co trong danh sach");
             }
+            break;
         }
     }
 }
