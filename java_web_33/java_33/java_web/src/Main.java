@@ -2,31 +2,25 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        String name = " Nguyen Van A ";
-        String name1 = " hoc lap trinh ";
-        String name_input = " nguyen Van A ";
-        StringBuilder builder = new StringBuilder("Nguyen Van A ");
-        String s1 = "hoc lap trinh";
-        builder.append(s1);
-        System.out.println(builder);
-        builder.replace(0, 6, "Tran");
-        System.out.println(builder);
-
-        boolean check = name.equalsIgnoreCase(name_input);
-        if (check) {
-            System.out.println("Ten nhap vao giong nhau");
-        } else {
-            System.out.println("Ten nhap vao khong giong nhau");
+        String str = "Hãy viết một câu truy vấn để đếm số lượng đơn hàng mà mỗi khách hàng đã đặt";
+        String str_remove_space = str.replaceAll(" ", "");
+        String arr_str[] = new String[str_remove_space.length()];
+        for (int i = 0; i < str_remove_space.length(); i++) {
+            arr_str[i] = String.valueOf(str_remove_space.charAt(i));
         }
-        for (int i = 0; i < name.length(); i++) {
-            System.out.print(name.charAt(i));
+        StringBuilder builder = new StringBuilder();
+        int dem = 1;
+        for (int i = 0; i < arr_str.length; i++) {
+            if (!builder.toString().contains(arr_str[i])) {
+                builder.append(arr_str[i]);
+                for (int j = i + 1; j < arr_str.length; j++) {
+                    if (arr_str[i].equals(arr_str[j])) {
+                        dem++;
+                    }
+                }
+                System.out.println("Chu " + arr_str[i] + " xuat hien " + dem + " lan");
+                dem = 1;
+            }
         }
-        System.out.print("\n");
-        System.out.println(name.startsWith("a"));
-        System.out.println(name.contains("khong"));
-        String name2 = name.concat(name1);
-        name2 = name.replaceAll("Nguyen", "Tran");
-        System.out.println(name2.toUpperCase().trim());
-
     }
 }
