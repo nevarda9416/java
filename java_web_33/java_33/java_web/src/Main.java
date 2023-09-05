@@ -1,28 +1,58 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 import java.util.Scanner;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap so luong ten: ");
-        int amount = Integer.parseInt(scanner.nextLine());
-        String[] arr_str = new String[amount];
-        System.out.println("Nhap danh sach ten");
-        for (int i = 0; i < arr_str.length; i++) {
-            System.out.print("Ten thu " + (i + 1) + " la: ");
-            String name = scanner.nextLine();
-            arr_str[i] = name;
-        }
-        System.out.print("Nhap ten tim kiem: ");
-        String searchName = scanner.nextLine();
-        for (String s : arr_str) {
-            if (s.equals(searchName)) {
-                System.out.println("Ten " + searchName + " co trong danh sach");
-            } else {
-                System.out.println("Ten " + searchName + " khong co trong danh sach");
+        while (true) {
+            int select = showMenu();
+            switch (select) {
+                case 1:
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("Nhap vao so can kiem tra: ");
+                    boolean result = compareNumberArr(Integer.parseInt(scanner.nextLine()));
+                    if (result) {
+                        System.out.println("So co ton tai");
+                    } else {
+                        System.out.println("So khong ton tai");
+                    }
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+                default:
+                    break;
             }
-            break;
         }
+    }
+
+    public static boolean compareNumberArr(int number) {
+        int number_array[] = {2, 3, 4, 6};
+        for (int item : number_array) {
+            if (number == item) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int showMenu() {
+        System.out.print("Nhap vao chuc nang ban dung (1->5): ");
+        Scanner scanner = new Scanner(System.in);
+        int menu = Integer.parseInt(scanner.nextLine());
+        return menu;
     }
 }
