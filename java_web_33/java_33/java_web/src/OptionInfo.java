@@ -8,7 +8,7 @@ public class OptionInfo {
         return amount;
     }
 
-    public void setAmount(int temp2) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
