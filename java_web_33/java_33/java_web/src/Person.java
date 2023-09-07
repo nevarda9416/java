@@ -54,6 +54,53 @@ public class Person {
     public Person() {
     }
 
+    public static void show(List<Person> list) {
+        System.out.println("Thông tin sinh viên: ");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println("Mã sinh viên: " + list.get(i).code);
+            System.out.println("Tên sinh viên: " + list.get(i).name);
+            System.out.println("Địa chỉ sinh viên: " + list.get(i).address);
+            System.out.println("Tuổi sinh viên: " + list.get(i).age);
+            System.out.println("Giới tính sinh viên: " + list.get(i).gender);
+        }
+    }
+
+    public static void searchName(List<Person> list) {
+        System.out.println("Tìm kiếm theo tên");
+        Scanner scanSearchName = new Scanner(System.in);
+        System.out.print("Mời bạn nhập tên sinh viên: ");
+        String searchName = scanSearchName.nextLine();
+        boolean exist = false;
+        for (Person person : list) {
+            if (person.getName().contains(searchName)) {
+                exist = true;
+            }
+        }
+        if (exist) {
+            System.out.print("Sinh viên tên: " + searchName + " tồn tại");
+        } else {
+            System.out.print("Sinh viên tên: " + searchName + " không tồn tại");
+        }
+    }
+
+    public static void searchAge(List<Person> list) {
+        System.out.println("Tìm kiếm theo tuổi");
+        Scanner scanSearchAge = new Scanner(System.in);
+        System.out.print("Mời bạn nhập tuổi sinh viên: ");
+        Integer searchAge = scanSearchAge.nextInt();
+        boolean exist = false;
+        for (Person person : list) {
+            if (person.getAge() == searchAge) {
+                exist = true;
+            }
+        }
+        if (exist) {
+            System.out.print("Sinh viên tuổi: " + searchAge + " tồn tại");
+        } else {
+            System.out.print("Sinh viên tuổi: " + searchAge + " không tồn tại");
+        }
+    }
+
     public static void main(String[] args) {
         List<Person> list = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -81,13 +128,30 @@ public class Person {
         Collections.sort(list, (e1, e2) -> {
             return e1.getAge() - e2.getAge();
         });
-        System.out.println("Thông tin sinh viên: ");
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println("Mã sinh viên: " + list.get(i).code);
-            System.out.println("Tên sinh viên: " + list.get(i).name);
-            System.out.println("Địa chỉ sinh viên: " + list.get(i).address);
-            System.out.println("Tuổi sinh viên: " + list.get(i).age);
-            System.out.println("Giới tính sinh viên: " + list.get(i).gender);
+        show(list);
+        Scanner scanMenu = new Scanner(System.in);
+        System.out.print("Mời bạn chọn chức năng (1 - Tìm kiếm theo tên hoặc 2 - Tìm kiếm theo tuổi): ");
+        Integer menu = scanMenu.nextInt();
+        boolean check = true;
+        while (check) {
+            switch (menu) {
+                case 1:
+                    searchName(list);
+                    check = false;
+                    break;
+                case 2:
+                    searchAge(list);
+                    check = false;
+                    break;
+                default:
+                    check = false;
+                    break;
+            }
         }
+        int age = 0;
+        for (Person person : list) {
+            age += person.getAge();
+        }
+        System.out.printf("\nTổng số tuổi sinh viên là: %d", age);
     }
 }
