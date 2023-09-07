@@ -1,4 +1,5 @@
 
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,7 +8,7 @@ public class Person {
     private String code; // Mã sinh viên
     private String name; // Tên sinh viên
     private String address; // Địa chỉ
-    private int age = 10; // Tuổi
+    private Integer age = 10; // Tuổi
     private String gender = "Nam"; // Giới tính
 
     public String getAddress() {
@@ -77,6 +78,9 @@ public class Person {
             person.setGender(scanGender.nextLine());
             list.add(person);
         }
+        Collections.sort(list, (e1, e2) -> {
+            return e1.getAge() - e2.getAge();
+        });
         System.out.println("Thông tin sinh viên: ");
         for (int i = 0; i < list.size(); i++) {
             System.out.println("Mã sinh viên: " + list.get(i).code);
