@@ -3,38 +3,36 @@
 // (powered by FernFlower decompiler)
 //
 
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Main extends Student {
+public class Main {
     public static void main(String[] args) {
-        Car car = new Car("1", "Mercedez", "White", 2100000000);
-        Scanner numberVersion = new Scanner(System.in); // Create a Scanner object
-        System.out.print("Nhập vào số lượng phiên bản: ");
-        int number = numberVersion.nextInt();
-        OptionInfo[] optionInfo = new OptionInfo[number];
-        for (int i = 0; i < optionInfo.length; i++) {
-            Scanner myCar = new Scanner(System.in); // Create a Scanner object
-            System.out.print("Nhập vào nơi sản xuất phiên bản thứ " + (i + 1) + ": ");
-            String addressCreate = myCar.nextLine(); // Read user input
-            System.out.print("Nhập vào số lượng xe phiên bản thứ " + (i + 1) + ": ");
-            Integer amount = myCar.nextInt(); // Read user input
-            OptionInfo optionInfo1 = new OptionInfo(new Date(), addressCreate, amount);
-            optionInfo[i] = optionInfo1;
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(12);
+        list.add(11);
+        list.add(2);
+        list.add(5);
+        list.add(20);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
         }
-        for (int i = 0; i < optionInfo.length - 1; i++) {
-            for (int j = i + 1; j < optionInfo.length; j++) {
-                if (optionInfo[i].getAmount() > optionInfo[j].getAmount()) {
-                    String tempAddressCreate = optionInfo[j].getAddressCreate();
-                    Integer tempAmount = optionInfo[j].getAmount();
-                    optionInfo[j].setAddressCreate(optionInfo[i].getAddressCreate());
-                    optionInfo[j].setAmount(optionInfo[i].getAmount());
-                    optionInfo[i].setAddressCreate(tempAddressCreate);
-                    optionInfo[i].setAmount(tempAmount);
-                }
-            }
+        System.out.println(list.contains(4));
+        System.out.println(list.size());
+        System.out.println(list.remove(2));
+
+        list.stream().forEach(e -> System.out.println(e.toString()));
+        list.forEach(e -> System.out.println(e.toString()));
+        int[] arrNumber = new int[5];
+        arrNumber[0] = 12;
+        arrNumber[1] = 11;
+        arrNumber[2] = 2;
+        arrNumber[3] = 5;
+        arrNumber[4] = 20;
+        for (int i = 0; i < arrNumber.length; i++) {
+            System.out.println(arrNumber[i]);
         }
-        car.setOptionInfos(optionInfo);
-        System.out.print(car);
     }
 }
