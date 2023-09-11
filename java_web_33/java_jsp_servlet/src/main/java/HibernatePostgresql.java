@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 public class HibernatePostgresql {
     public static void main(String[] args) {
-        String confFile = "src/main/resources/hibernate.cfg.xml";
+        String confFile = "main/resources/hibernate.cfg.xml";
         ClassLoader classLoader = HibernatePostgresql.class.getClassLoader();
         File f = new File(classLoader.getResource(confFile).getFile());
         SessionFactory sessionFactory = new Configuration().configure(f).buildSessionFactory();
