@@ -1,4 +1,4 @@
-package com.example.spring_boot;
+package com.example.spring_boot.greeting;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,12 +10,12 @@ public class GreetingController {
     @GetMapping("/greeting")
     public String greetingForm(Model model) {
         model.addAttribute("greeting", new Greeting());
-        return "greeting";
+        return "greeting/index";
     }
 
     @PostMapping("/greeting")
     public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
         model.addAttribute("greeting", greeting);
-        return "result";
+        return "greeting/result";
     }
 }

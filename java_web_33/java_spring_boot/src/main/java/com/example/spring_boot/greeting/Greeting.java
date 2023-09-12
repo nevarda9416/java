@@ -1,4 +1,4 @@
-package com.example.spring_boot;
+package com.example.spring_boot.greeting;
 
 public class Greeting {
     private long id;

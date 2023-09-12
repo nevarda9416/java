@@ -1,4 +1,4 @@
-package com.example.spring_boot;
+package com.example.spring_boot.employee;
 
 public class Address {
     private String street;
