@@ -47,15 +47,14 @@ public class Customer extends Common {
     }
 
     public Customer inputData() {
-        Scanner scanner = new Scanner(System.in);
         Customer customer = new Customer();
-        System.out.print("Mã: ");
+        System.out.print("Mã khách: ");
         Scanner scannerId = new Scanner(System.in);
         customer.setId(scannerId.nextInt());
-        System.out.print("Tên: ");
+        System.out.print("Tên khách: ");
         Scanner scannerName = new Scanner(System.in);
         customer.setName(scannerName.nextLine());
-        System.out.print("Địa chỉ: ");
+        System.out.print("Địa chỉ khách: ");
         Scanner scannerAddress = new Scanner(System.in);
         customer.setAddress(scannerAddress.nextLine());
         System.out.print("Tuổi: ");
