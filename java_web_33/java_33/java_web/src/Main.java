@@ -3,73 +3,61 @@
 // (powered by FernFlower decompiler)
 //
 
-import Models.Customer;
-import Models.Book;
-import Services.Implements.CustomerService;
-import Services.Implements.BookService;
-
+import java.io.File;
 import java.util.*;
 
 public class Main {
-    static CustomerService customerService = new CustomerService();
-    static BookService bookService = new BookService();
 
     public static void main(String[] args) {
         try {
-            Scanner scanner = new Scanner(System.in);
-            while (true) {
-                System.out.println("1. Danh sách khách hàng");
-                System.out.println("2. Thêm mới khách hàng");
-                System.out.println("3. Cập nhật khách hàng");
-                System.out.println("4. Xóa khách hàng");
-                System.out.println("5. Danh sách sách");
-                System.out.println("6. Thêm mới sách");
-                System.out.println("7. Cập nhật sách");
-                System.out.println("8. Xóa sách");
-                System.out.print("Nhập vào chức năng mong muốn: ");
-                int select = scanner.nextInt();
-                switch (select) {
-                    case 1 -> {
-                        List<Customer> customerList = customerService.getAll();
-                        if (!customerList.isEmpty()) {
-                            for (Customer customer : customerList) {
-                                customer.displayInfo();
-                            }
+            String folder = "C:\\dev\\java\\out";
+            String fileInFolder = "C:\\dev\\java\\out\\out.txt";
+            File fold = new File(folder);
+            File fileInFold = new File(fileInFolder);
+            if (fold.exists()) {
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Folder tồn tại bạn có muốn xóa không? ");
+                String select = scanner.nextLine();
+                if (select.equals("yes")) {
+                    fold.delete();
+                    if (fileInFold.exists()) {
+                        fileInFold.delete();
+                    }
+                } else {
+                    System.out.println("Folder không bị xóa");
+                }
+            } else {
+                Scanner scannerFold = new Scanner(System.in);
+                System.out.print("Folder không tồn tại bạn có muốn tạo mới không? ");
+                String selectFold = scannerFold.nextLine();
+                if (selectFold.equals("yes")) {
+                    fold.mkdir();
+                    String path = "C:\\dev\\java\\out\\out.txt";
+                    File file = new File(path);
+                    //System.out.println(file.getPath());
+                    //System.out.println(file.getName());
+                    //System.out.println(file.isFile());
+                    if (file.exists()) {
+                        Scanner scannerFile = new Scanner(System.in);
+                        System.out.print("File tồn tại bạn có muốn xóa không? ");
+                        String selectFile = scannerFile.nextLine();
+                        if (selectFile.equals("yes")) {
+                            file.delete();
                         } else {
-                            System.out.println("Danh sách khách trống");
+                            System.out.println("File không bị xóa");
+                        }
+                    } else {
+                        Scanner scanner = new Scanner(System.in);
+                        System.out.print("File không tồn tại bạn có muốn tạo mới không? ");
+                        String select = scanner.nextLine();
+                        if (select.equals("yes")) {
+                            file.createNewFile();
+                        } else {
+                            System.out.println("File không được tạo mới");
                         }
                     }
-                    case 2 -> {
-                        customerService.save(new Customer().inputData());
-                    }
-                    case 3 -> {
-                        customerService.update(new Customer().inputData());
-                    }
-                    case 4 -> {
-                        System.out.print("Nhập vào id khách cần xóa: ");
-                        customerService.delete(scanner.nextInt());
-                    }
-                    case 5 -> {
-                        List<Book> bookList = bookService.getAll();
-                        if (!bookList.isEmpty()) {
-                            for (Book book : bookList) {
-                                book.displayInfo();
-                            }
-                        } else {
-                            System.out.println("Danh sách sách trống");
-                        }
-                    }
-                    case 6 -> {
-                        bookService.save(new Book().inputData());
-                    }
-                    case 7 -> {
-                        bookService.update(new Book().inputData());
-                    }
-                    case 8 -> {
-                        System.out.print("Nhập vào id sách cần xóa: ");
-                        bookService.delete(scanner.nextInt());
-                    }
-                    default -> System.out.println("Mời lựa chọn lại");
+                } else {
+                    System.out.println("Folder không được tạo mới");
                 }
             }
         } catch (Exception exception) {
