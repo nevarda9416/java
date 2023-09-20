@@ -5,14 +5,24 @@ import java.util.Scanner;
 public class Customer extends Common {
     private String address;
     private int age;
+    private String gender;
 
     public Customer() {
     }
 
-    public Customer(int id, String name, String address, int age) {
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Customer(int id, String name, String address, int age, String gender) {
         super(id, name);
         this.address = address;
         this.age = age;
+        this.gender = gender;
     }
 
     public String getAddress() {
@@ -34,8 +44,10 @@ public class Customer extends Common {
     @Override
     public String toString() {
         return "Customer{" +
-                "address='" + address + '\'' +
+                "ID='" + getId() + '\'' +
+                ", name=" + getName() +
                 ", age=" + age +
+                ", gender=" + gender +
                 '}';
     }
 
@@ -44,6 +56,7 @@ public class Customer extends Common {
         System.out.println("Tên: " + this.getName());
         System.out.println("Địa chỉ: " + this.getAddress());
         System.out.println("Tuổi: " + this.getAge());
+        System.out.println("Giới tính: " + this.getGender());
     }
 
     public Customer inputData() {
@@ -60,6 +73,9 @@ public class Customer extends Common {
         System.out.print("Tuổi: ");
         Scanner scannerAge = new Scanner(System.in);
         customer.setAge(scannerAge.nextInt());
+        System.out.print("Giới tính: ");
+        Scanner scannerGender = new Scanner(System.in);
+        customer.setGender(scannerGender.nextLine());
         return customer;
     }
 }
