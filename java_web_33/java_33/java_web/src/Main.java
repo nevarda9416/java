@@ -4,10 +4,10 @@
 //
 
 import Services.Implements.AccountService;
+
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         try {
             Scanner scanner = new Scanner(System.in);
@@ -23,25 +23,12 @@ public class Main {
                 System.out.print("Hãy chọn chức năng: ");
                 int select = Integer.parseInt(scanner.nextLine());
                 switch (select) {
-                    case 1:
-                        accountService.save();
-                        break;
-                    case 2:
-                        accountService.update();
-                        break;
-                    case 3:
-                        accountService.searchUsername();
-                        break;
-                    case 4:
-                        accountService.delete();
-                        break;
-                    case 5:
-                        accountService.getAllAscOrDescByAge();
-                        break;
-                    case 6:
-                    default:
-                        isContinue = false;
-                        break;
+                    case 1 -> accountService.save();
+                    case 2 -> accountService.update();
+                    case 3 -> accountService.searchUsername();
+                    case 4 -> accountService.delete();
+                    case 5 -> accountService.getAllAscOrDescByAge();
+                    default -> isContinue = false;
                 }
             }
         } catch (Exception exception) {
