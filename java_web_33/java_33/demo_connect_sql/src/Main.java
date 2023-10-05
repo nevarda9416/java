@@ -10,11 +10,12 @@ public class Main {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
-            String sql = "INSERT INTO products(name, made_in, status) VALUES (?, ?, ?)";
+            String sql = "UPDATE products SET name = ?, made_in = ?, status = ? WHERE id = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1, "Vay nu");
-            statement.setString(2, "France");
-            statement.setInt(3, 1);
+            statement.setString(1, "Vay less");
+            statement.setString(2, "My");
+            statement.setInt(3, 0);
+            statement.setInt(4, 6);
             statement.executeUpdate();
             connection.close();
             System.out.println("Kết nối thành công");
