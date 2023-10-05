@@ -1,5 +1,6 @@
 
 import java.sql.*;
+import java.util.Scanner;
 
 // Thực thi 1 transaction đơn giản sau
 public class Main {
@@ -10,15 +11,18 @@ public class Main {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
-            String sql = "UPDATE products SET name = ?, made_in = ?, status = ? WHERE id = ?";
+            String sql = "SELECT * FROM products WHERE name LIKE ?";
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1, "Vay less");
-            statement.setString(2, "My");
-            statement.setInt(3, 0);
-            statement.setInt(4, 6);
-            statement.executeUpdate();
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Nhập tên sản phẩm cần tìm kiếm: ");
+            statement.setString(1, "%" + scanner.nextLine() + "%");
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                System.out.println("Sản phẩm có tồn tại");
+            } else {
+                System.out.println("Sản phẩm không tồn tại");
+            }
             connection.close();
-            System.out.println("Kết nối thành công");
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
