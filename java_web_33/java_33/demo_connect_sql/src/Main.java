@@ -1,11 +1,7 @@
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+// Thực thi 1 transaction đơn giản sau
 public class Main {
     public static void main(String[] args) {
         String DB_URL = "jdbc:mysql://localhost:3306/java_web_33?useSSL=false";
@@ -14,21 +10,16 @@ public class Main {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);
-            String sql = "SELECT * FROM products";
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
-            while (resultSet.next()) {
-                Product product = new Product();
-                product.setId(resultSet.getInt("id"));
-                product.setName(resultSet.getString("name"));
-                product.setMade_in(resultSet.getString("made_in"));
-                product.setStatus(resultSet.getInt("status"));
-                System.out.println(product.toString());
-                System.out.println("");
-            }
+            String sql = "INSERT INTO products(name, made_in, status) VALUES (?, ?, ?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, "Vay nu");
+            statement.setString(2, "France");
+            statement.setInt(3, 1);
+            statement.executeUpdate();
+            connection.close();
             System.out.println("Kết nối thành công");
         } catch (Exception exception) {
-
+            System.out.println(exception.getMessage());
         }
     }
 }
