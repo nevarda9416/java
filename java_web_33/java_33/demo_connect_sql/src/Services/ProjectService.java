@@ -1,6 +1,5 @@
 package Services;
 
-import Models.Employee_Project;
 import Models.Project;
 import Utils.DatabaseConnection;
 
@@ -84,32 +83,23 @@ public class ProjectService implements BaseService<Project> {
     }
 
     // 3/ Tìm kiếm dự án
-    public void findByName() {
+    public String findByCode(String code) {
         List<Project> projectList = new ArrayList<>();
         try {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             Connection connection = databaseConnection.openConnection();
-            String sql = "SELECT * FROM projects WHERE name LIKE ?";
+            String sql = "SELECT id FROM projects WHERE code LIKE ?";
             PreparedStatement statement = connection.prepareStatement(sql);
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Nhập tên dự án cần tìm kiếm: ");
-            statement.setString(1, "%" + scanner.nextLine() + "%");
+            statement.setString(1, "%" + code + "%");
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                System.out.println("Dự án có tồn tại");
-                Project project = new Project();
-                project.setCode(resultSet.getString("code"));
-                project.setName(resultSet.getString("name"));
-                project.setDescription(resultSet.getString("description"));
-                project.setStart_date(resultSet.getString("start_date"));
-                project.setEnd_date(resultSet.getString("end_date"));
-                projectList.add(project);
-                System.out.println(project.toString());
+                return resultSet.getString("id");
             } else {
-                System.out.println("Dự án không tồn tại");
+                return null;
             }
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
+            return null;
         }
     }
 
@@ -160,21 +150,20 @@ public class ProjectService implements BaseService<Project> {
         }
     }
 
+    // 9/ Thêm nhân viên vào trong dự án
     public void assignEmployee() {
         try {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             Connection connection = databaseConnection.openConnection();
             String sql = "INSERT INTO employees_projects(project_id, employee_id) VALUES (?, ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
-
-            System.out.print("Nhập ID dự án: ");
-            Scanner scannerProjectID = new Scanner(System.in);
-            int projectID = scannerProjectID.nextInt();
-
-            System.out.print("Nhập ID nhân viên: ");
-            Scanner scannerEmployeeID = new Scanner(System.in);
-            int employeeID = scannerEmployeeID.nextInt();
-
+            System.out.print("Nhập mã dự án: ");
+            Scanner scannerProjectCode = new Scanner(System.in);
+            int projectID = Integer.parseInt(this.findByCode(scannerProjectCode.nextLine()));
+            System.out.print("Nhập mã nhân viên: ");
+            Scanner scannerEmployeeCode = new Scanner(System.in);
+            ProjectService projectService = new ProjectService();
+            int employeeID = Integer.parseInt(projectService.findByCode(scannerEmployeeCode.nextLine()));
             statement.setInt(1, projectID);
             statement.setInt(2, employeeID);
             statement.executeUpdate();
@@ -185,6 +174,7 @@ public class ProjectService implements BaseService<Project> {
         }
     }
 
+    // 10/ Thống kê nhân viên trong dự án
     public void getStatistic() throws SQLException {
         DatabaseConnection databaseConnection = new DatabaseConnection();
         Connection connection = databaseConnection.openConnection();

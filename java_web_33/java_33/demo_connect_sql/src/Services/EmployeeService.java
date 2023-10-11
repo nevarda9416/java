@@ -1,5 +1,6 @@
 package Services;
 
+import Models.Project;
 import Utils.DatabaseConnection;
 import Models.Employee;
 
@@ -91,32 +92,23 @@ public class EmployeeService implements BaseService<Employee> {
     }
 
     // 3/ Tìm kiếm nhân viên
-    public void findByName() {
-        List<Employee> employeeList = new ArrayList<>();
+    public String findByCode(String code) {
+        List<Project> projectList = new ArrayList<>();
         try {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             Connection connection = databaseConnection.openConnection();
-            String sql = "SELECT * FROM employees WHERE name LIKE ?";
+            String sql = "SELECT id FROM employees WHERE code LIKE ?";
             PreparedStatement statement = connection.prepareStatement(sql);
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Nhập tên nhân viên cần tìm kiếm: ");
-            statement.setString(1, "%" + scanner.nextLine() + "%");
+            statement.setString(1, "%" + code + "%");
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                System.out.println("Nhân viên có tồn tại");
-                Employee employee = new Employee();
-                employee.setFullname(resultSet.getString("fullname"));
-                employee.setAddress(resultSet.getString("address"));
-                employee.setTelephone(resultSet.getString("telephone"));
-                employee.setGender(resultSet.getString("gender"));
-                employee.setAge(resultSet.getInt("age"));
-                employeeList.add(employee);
-                System.out.println(employee.toString());
+                return resultSet.getString("id");
             } else {
-                System.out.println("Nhân viên không tồn tại");
+                return null;
             }
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
+            return null;
         }
     }
 

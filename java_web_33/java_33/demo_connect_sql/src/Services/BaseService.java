@@ -7,7 +7,7 @@ public interface BaseService<T> {
 
     void update();
 
-    void findByName();
+    void findByCode(String code);
 
     void deleteById();
 
