@@ -1,4 +1,4 @@
-package com.example.demo_servlet.Controllers;
+package com.example.demo_servlet.Controllers.Student;
 
 import com.example.demo_servlet.Services.StudentService;
 
@@ -9,15 +9,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet
-public class ServletDeleteStudent extends HttpServlet {
+@WebServlet(name = "DeleteController", value = "/DeleteController")
+public class DeleteController extends HttpServlet {
     private StudentService studentService = new StudentService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("id"));
         studentService.delete(id);
-        resp.sendRedirect("StudentServlet");
+        resp.sendRedirect("IndexController");
     }
 
     @Override

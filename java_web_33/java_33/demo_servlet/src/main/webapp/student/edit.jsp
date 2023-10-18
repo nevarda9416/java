@@ -14,7 +14,7 @@
 
 <div class="container">
     <h2>Cập nhật thông tin</h2>
-    <form action="ServletEditStudent" method="post">
+    <form action="EditController" method="post">
         <input type="hidden" name="id" value="${student.id}">
         <div class="form-group">
             <label for="name">Họ và tên:</label>

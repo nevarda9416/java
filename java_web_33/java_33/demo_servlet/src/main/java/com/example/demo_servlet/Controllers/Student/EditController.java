@@ -1,4 +1,4 @@
-package com.example.demo_servlet.Controllers;
+package com.example.demo_servlet.Controllers.Student;
 
 import com.example.demo_servlet.Entities.Student;
 import com.example.demo_servlet.Services.StudentService;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "ServletEditStudent", value = "/ServletEditStudent")
-public class ServletEditStudent extends HttpServlet {
+@WebServlet(name = "EditController", value = "/EditController")
+public class EditController extends HttpServlet {
     private StudentService studentService = new StudentService();
 
     @Override
@@ -20,7 +20,7 @@ public class ServletEditStudent extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("id"));
         Student student = studentService.findById(id);
         req.setAttribute("student", student);
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("edit.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("student/edit.jsp");
         requestDispatcher.forward(req, resp);
     }
 
@@ -33,6 +33,6 @@ public class ServletEditStudent extends HttpServlet {
         student.setAge(Integer.parseInt(req.getParameter("age")));
         System.out.println(student);
         studentService.update(student);
-        resp.sendRedirect("StudentServlet");
+        resp.sendRedirect("IndexController");
     }
 }

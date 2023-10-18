@@ -25,7 +25,7 @@
     <h2>Danh sách sinh viên</h2>
     <div class="row">
         <div class="col-5">
-            <form action="ServletSearchStudent" method="get">
+            <form action="SearchController" method="get">
                 <div class="form-group">
                     <label for="name">Nhập họ và tên:</label>
                     <input type="text" class="form-control" id="name" name="name"
@@ -34,7 +34,7 @@
                 <button type="submit" class="btn btn-primary">Tìm kiếm</button>
             </form>
             <h2>Thêm mới sinh viên</h2>
-            <form action="ServletAddStudent" method="post">
+            <form action="AddController" method="post">
                 <div class="form-group">
                     <label for="name">Họ và tên:</label>
                     <input type="text" class="form-control" name="name" value="">
@@ -67,8 +67,8 @@
                         <td>${student.name}</td>
                         <td>${student.address}</td>
                         <td>
-                            <a href="./ServletEditStudent?id=${student.id}">Edit</a> |
-                            <a href="./ServletDeleteStudent?id=${student.id}"
+                            <a href="./EditController?id=${student.id}">Edit</a> |
+                            <a href="./DeleteController?id=${student.id}"
                                onclick="return confirm('Bạn có chắc chắc muốn xóa student này chứ?')">Delete</a>
                         </td>
                     </tr>
