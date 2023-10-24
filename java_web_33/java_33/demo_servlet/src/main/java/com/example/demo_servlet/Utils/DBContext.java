@@ -7,7 +7,7 @@ public class DBContext {
     public Connection openConnection() {
         String DB_URL = "jdbc:mysql://localhost:3306/java_web_33?useSSL=false";
         String USER_NAME = "root";
-        String PASSWORD = "admin";
+        String PASSWORD = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             return DriverManager.getConnection(DB_URL, USER_NAME, PASSWORD);

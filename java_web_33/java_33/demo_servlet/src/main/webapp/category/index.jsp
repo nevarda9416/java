@@ -14,7 +14,7 @@
 
 <div class="container">
   <h2>Thêm danh mục con</h2>
-  <form action="Category/AddController" method="post">
+  <form action="/Category/AddController" method="post">
     <input type="hidden" name="id" value="${category.id}">
     <div class="form-group">
       <label for="name">Tên:</label>

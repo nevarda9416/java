@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "Category/AddSubController", value = "Category/AddSubController")
+@WebServlet(name = "CategoryAddSubController", value = "/Category/AddSubController")
 public class AddSubController extends HttpServlet {
     private CategoryService categoryService = new CategoryService();
     private SubCategoryService subCategoryService = new SubCategoryService();
