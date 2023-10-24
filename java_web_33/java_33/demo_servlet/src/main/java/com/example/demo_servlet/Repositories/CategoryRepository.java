@@ -1,7 +1,6 @@
 package com.example.demo_servlet.Repositories;
 
 import com.example.demo_servlet.Entities.Category;
-import com.example.demo_servlet.Entities.Category;
 import com.example.demo_servlet.Utils.DBContext;
 
 import java.sql.Connection;

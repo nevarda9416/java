@@ -1,7 +1,6 @@
 package com.example.demo_servlet.Services;
 
 import com.example.demo_servlet.Entities.Category;
-import com.example.demo_servlet.Entities.Student;
 import com.example.demo_servlet.Repositories.CategoryRepository;
 
 import java.util.List;

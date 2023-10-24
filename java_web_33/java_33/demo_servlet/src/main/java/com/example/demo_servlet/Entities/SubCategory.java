@@ -12,5 +12,8 @@ import lombok.Setter;
 public class SubCategory {
     private int id;
     private String name;
-    private int parent_id;
+    private int categoryId;
+
+    public SubCategory(String name, int categoryId) {
+    }
 }
