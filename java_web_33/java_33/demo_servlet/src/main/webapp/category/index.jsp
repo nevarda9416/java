@@ -14,16 +14,16 @@
 
 <div class="container">
   <h2>Thêm danh mục con</h2>
-  <form action="/Category/AddController" method="post">
+  <form action="AddSubController" method="post">
     <input type="hidden" name="id" value="${category.id}">
     <div class="form-group">
       <label for="name">Tên:</label>
       <input type="text" class="form-control" id="name" name="name" value="${category.name}">
     </div>
     <div class="form-group">
-      <label for="category">Danh mục cha:</label>
-      <select name="category" id="category" class="selectpicker">
-        <c:forEach var="cate" items="${list.cate}">
+      <label for="category_id">Danh mục cha:</label>
+      <select name="category_id" id="category_id" class="form-control">
+        <c:forEach var="cate" items="${categories}">
           <option value="${cate.id}">${cate.name}</option>
         </c:forEach>
       </select>

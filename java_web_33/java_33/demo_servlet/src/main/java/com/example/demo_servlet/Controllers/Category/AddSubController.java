@@ -20,15 +20,17 @@ public class AddSubController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("categories", categoryService.getAll());
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("category/index.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/category/index.jsp");
         requestDispatcher.forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("name");
-        int categoryId = Integer.parseInt(req.getParameter("category"));
-        SubCategory subCategory = new SubCategory(name, categoryId);
+        SubCategory subCategory = new SubCategory();
+        subCategory.setName(req.getParameter("name"));
+        subCategory.setCategoryId(Integer.parseInt(req.getParameter("category_id")));
+        subCategory.setStatus(1); // default status
         subCategoryService.add(subCategory);
+        resp.sendRedirect("AddController");
     }
 }

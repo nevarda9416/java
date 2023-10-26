@@ -12,12 +12,10 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Thời trang</title>
 </head>
 <body>
@@ -28,16 +26,16 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Trang chủ</a></li>
-            <c:forEach var="cate" items="${categories}">
+            <c:forEach var="category" items="${categories}">
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">${category.name}
                     <span class="caret"></span>
                 </a>
                     <ul class="dropdown-menu">
-                        <c:forEach var="subCate" items="${cate.subCategoryList}">
-                            <c:if test="${cate.id == subCate.category_id}">
-                                <li><a href="#">${subCate.name}</a></li>
-                            </c:if>
-                        </c:forEach>
+<%--                        <c:forEach var="subCategory" items="${category.subCategoryList}">--%>
+<%--                            <c:if test="${category.id == subCategory.category_id}">--%>
+<%--                                <li><a href="#">${subCategory.name}</a></li>--%>
+<%--                            </c:if>--%>
+<%--                        </c:forEach>--%>
                     </ul>
                 </li>
             </c:forEach>

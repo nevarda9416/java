@@ -11,6 +11,7 @@ public class SubCategoryService {
         return subCategoryRepository.getAll();
     }
 
-    public void add(SubCategory subCategory) {
+    public boolean add(SubCategory subCategory) {
+        return subCategoryRepository.add(subCategory);
     }
 }

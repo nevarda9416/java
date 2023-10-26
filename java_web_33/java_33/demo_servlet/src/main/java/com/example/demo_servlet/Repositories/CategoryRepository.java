@@ -35,7 +35,7 @@ public class CategoryRepository {
     public boolean add(Category category) {
         DBContext context = new DBContext();
         Connection connection = context.openConnection();
-        String sql = "INSERT INTO Category(name, status) VALUES (?, ?)";
+        String sql = "INSERT INTO categories(name, status) VALUES (?, ?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, category.getName());

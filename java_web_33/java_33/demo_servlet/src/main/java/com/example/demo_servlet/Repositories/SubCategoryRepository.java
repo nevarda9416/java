@@ -35,11 +35,13 @@ public class SubCategoryRepository {
     public boolean add(SubCategory subCategory) {
         DBContext context = new DBContext();
         Connection connection = context.openConnection();
-        String sql = "INSERT INTO sub_category(name, category_id) VALUES (?, ?)";
+        System.out.println(subCategory.getName());
+        String sql = "INSERT INTO subcategories(name, category_id, status) VALUES (?, ?, ?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, subCategory.getName());
             preparedStatement.setInt(2, subCategory.getCategoryId());
+            preparedStatement.setInt(3, subCategory.getStatus());
             preparedStatement.executeUpdate();
             return true;
         } catch (Exception exception) {

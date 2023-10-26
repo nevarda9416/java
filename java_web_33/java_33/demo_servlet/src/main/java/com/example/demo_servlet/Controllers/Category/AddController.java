@@ -17,7 +17,7 @@ public class AddController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("categories", categoryService.getAll());
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("category/index.jsp");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/category/index.jsp");
         requestDispatcher.forward(req, resp);
     }
 
