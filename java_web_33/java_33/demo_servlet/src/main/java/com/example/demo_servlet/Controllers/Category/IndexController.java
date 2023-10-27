@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +26,25 @@ public class IndexController extends HttpServlet {
     private ProductService productService = new ProductService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        int id = 0;
+        if (req.getParameterMap().containsKey("id")) {
+            id = Integer.parseInt(req.getParameter("id"));
+        }
         List<CategoryDTO> categoryDTOList = new ArrayList<>();
-        List<Product> productList = productService.getAll();
+        List<Product> productList;
+        if (id > 0) {
+            try {
+                productList = productService.findByCategoryId(id);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            try {
+                productList = productService.getAll();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
         for (Category category: categoryService.getAll()) {
             CategoryDTO categoryDTO = new CategoryDTO();
             categoryDTO.setId(category.getId());

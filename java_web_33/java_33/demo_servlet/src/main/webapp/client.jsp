@@ -22,17 +22,17 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Thời trang</a>
+            <a class="navbar-brand" href="./">Thời trang</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Trang chủ</a></li>
+            <li class="active"><a href="./">Trang chủ</a></li>
             <c:forEach var="category" items="${categories}">
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">${category.name}
                     <span class="caret"></span>
                 </a>
                     <ul class="dropdown-menu">
                         <c:forEach var="subCategory" items="${category.subCategoryList}">
-                            <li><a href="ProductBySubCategory?id=${subCategory.id}">${subCategory.name}</a></li>
+                            <li><a href="IndexController?id=${subCategory.id}">${subCategory.name}</a></li>
                         </c:forEach>
                     </ul>
                 </li>
