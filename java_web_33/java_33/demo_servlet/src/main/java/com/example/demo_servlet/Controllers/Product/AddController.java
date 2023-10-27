@@ -30,7 +30,7 @@ public class AddController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
-        String price = req.getParameter("price");
+        int price = Integer.parseInt(req.getParameter("price"));
         int categoryId = Integer.parseInt(req.getParameter("category_id"));
         InputStream fileContent = null;
         OutputStream out = null;

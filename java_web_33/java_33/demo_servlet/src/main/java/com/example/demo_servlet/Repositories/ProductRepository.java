@@ -22,9 +22,9 @@ public class ProductRepository {
             while (resultSet.next()) {
                 Product product = new Product();
                 product.setName(resultSet.getString("name"));
-                product.setStatus(resultSet.getInt("price"));
-                product.setName(resultSet.getString("image"));
-                product.setStatus(resultSet.getInt("category_id"));
+                product.setPrice(resultSet.getInt("price"));
+                product.setImage(resultSet.getString("image"));
+                product.setCategoryId(resultSet.getInt("category_id"));
                 product.setStatus(resultSet.getInt("status"));
                 products.add(product);
             }
@@ -41,7 +41,7 @@ public class ProductRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, product.getName());
-            preparedStatement.setInt(2, Integer.parseInt(product.getPrice()));
+            preparedStatement.setInt(2, product.getPrice());
             preparedStatement.setString(3, product.getImage());
             preparedStatement.setInt(4, product.getCategoryId());
             preparedStatement.setInt(5, 1);

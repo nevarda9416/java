@@ -10,12 +10,12 @@ import lombok.Setter;
 @Setter
 public class Product {
     private String name;
-    private String price;
+    private int price;
     private String image;
     private int categoryId;
     private int status;
 
-    public Product(String name, String price, String fileName, int categoryId, int i) {
+    public Product(String name, int price, String fileName, int categoryId, int i) {
         this.name = name;
         this.price = price;
         this.image = fileName;

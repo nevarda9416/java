@@ -31,16 +31,29 @@
                     <span class="caret"></span>
                 </a>
                     <ul class="dropdown-menu">
-<%--                        <c:forEach var="subCategory" items="${category.subCategoryList}">--%>
-<%--                            <c:if test="${category.id == subCategory.category_id}">--%>
-<%--                                <li><a href="#">${subCategory.name}</a></li>--%>
-<%--                            </c:if>--%>
-<%--                        </c:forEach>--%>
+                        <c:forEach var="subCategory" items="${category.subCategoryList}">
+                            <li><a href="ProductBySubCategory?id=${subCategory.id}">${subCategory.name}</a></li>
+                        </c:forEach>
                     </ul>
                 </li>
             </c:forEach>
         </ul>
     </div>
 </nav>
+<div class="container-fluid">
+    <div class="row">
+        <c:forEach var="product" items="${products}">
+            <div class="col-lg-4">
+                <div>
+                    <img style="width:300px" src="image/${product.image}" alt="${product.name}"/>
+                </div>
+                <div>
+                    <p><strong>${product.name}</strong></p>
+                    <p>${product.price} <strong>VNĐ</strong></p>
+                </div>
+            </div>
+        </c:forEach>
+    </div>
+</div>
 </body>
 </html>

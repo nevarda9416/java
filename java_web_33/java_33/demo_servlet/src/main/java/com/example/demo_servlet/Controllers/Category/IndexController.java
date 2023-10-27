@@ -2,8 +2,10 @@ package com.example.demo_servlet.Controllers.Category;
 
 import com.example.demo_servlet.DTO.CategoryDTO;
 import com.example.demo_servlet.Entities.Category;
+import com.example.demo_servlet.Entities.Product;
 import com.example.demo_servlet.Entities.SubCategory;
 import com.example.demo_servlet.Services.CategoryService;
+import com.example.demo_servlet.Services.ProductService;
 import com.example.demo_servlet.Services.SubCategoryService;
 
 import javax.servlet.RequestDispatcher;
@@ -20,10 +22,11 @@ import java.util.List;
 public class IndexController extends HttpServlet {
     private CategoryService categoryService = new CategoryService();
     private SubCategoryService subCategoryService = new SubCategoryService();
-
+    private ProductService productService = new ProductService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<CategoryDTO> categoryDTOList = new ArrayList<>();
+        List<Product> productList = productService.getAll();
         for (Category category: categoryService.getAll()) {
             CategoryDTO categoryDTO = new CategoryDTO();
             categoryDTO.setId(category.getId());
@@ -37,6 +40,8 @@ public class IndexController extends HttpServlet {
             categoryDTOList.add(categoryDTO);
         }
         req.setAttribute("categories", categoryDTOList);
+        System.out.println(productList);
+        req.setAttribute("products", productList);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("client.jsp");
         requestDispatcher.forward(req, resp);
     }
