@@ -17,7 +17,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name = "student_name", length = 50, unique = true)
+    @Column(name = "name", length = 50, unique = true)
     @NotNull
     private String name;
     private int age;

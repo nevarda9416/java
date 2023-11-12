@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="../../static/style.css">
+    <title>Danh sách sinh viên</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="content">Title</div>
+<div class="container">
+    <h2>Danh sách sinh viên</h2>
+    <div class="row">
+        <button onclick="btnAdd()">Thêm mới</button>
+    </div>
+    <div class="col-lg-10" style="display:flex;justify-content: right">
+        <input type="text" name="keyword" placeholder="Nhập vào tên cần tìm kiếm">
+        <button style="font-size:12px" onclick="btnSearch()">Tìm kiếm</button>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Tuổi</th>
+            <th>Thao tác</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="s: ${students}">
+            <td th:text="${s.id}"></td>
+            <td th:text="${s.name}"></td>
+            <td th:text="${s.age}"></td>
+            <td>
+                <button class="btn-warning" th:attr="onclick=|btnEdit('${s.id}')|">Sửa</button>
+                <button class="btn-danger">Xóa</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    function btnAdd() {
+        window.location.href = "add";
+    }
+
+    function btnEdit(id) {
+        window.location.href = "edit/" + id;
+    }
+
+    function btnSearch() {
+        var keyword = $('input[name="keyword"]').val();
+        window.location.href = "search?keyword=" + keyword;
+    }
+</script>
 </body>
 </html>
