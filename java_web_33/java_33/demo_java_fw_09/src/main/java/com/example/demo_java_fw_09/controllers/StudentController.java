@@ -19,24 +19,24 @@ public class StudentController {
     @Autowired
     StudentRepository studentRepository;
 
-    @GetMapping("/getAll")
+    @GetMapping("/students")
     public String homeStudent(Model model) {
         List<Student> studentList = studentService.getAll();
+        model.addAttribute("keyword", "");
         model.addAttribute("students", studentList);
-        return "admin/student";
+        return "admin/student/index";
     }
 
     @GetMapping("/add")
     public String add(Model model) {
         model.addAttribute("student", new StudentDTO());
-        return "admin/add";
+        return "admin/student/add";
     }
 
     @PostMapping("/add")
     public String add(@ModelAttribute StudentDTO studentDTO) {
-        studentService.save(studentDTO.toEntity());
-        System.out.println(studentDTO);
-        return "redirect:/admin/getAll";
+        studentService.save(studentDTO);
+        return "redirect:/admin/students";
     }
 
     @GetMapping("/search")
@@ -47,21 +47,27 @@ public class StudentController {
         } else {
             studentList = studentService.search(keyword);
         }
-        System.out.println(studentList);
+        model.addAttribute("keyword", keyword);
         model.addAttribute("students", studentList);
-        return "admin/student";
+        return "admin/student/index";
     }
 
     @GetMapping("/edit/{id}")
     public String edit(Model model, @PathVariable("id") Long id) {
         Student student = studentService.findById(id);
         model.addAttribute("student", student);
-        return "admin/edit";
+        return "admin/student/edit";
     }
 
     @PostMapping("/edit")
-    public String edit(Model model, @ModelAttribute("student") Student student) {
-        studentService.save(student);
-        return "redirect:/admin/getAll";
+    public String edit(@ModelAttribute("student") StudentDTO studentDTO) {
+        studentService.save(studentDTO);
+        return "redirect:/admin/students";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable("id") Long id) {
+        studentService.deleteById(id);
+        return "redirect:/admin/students";
     }
 }

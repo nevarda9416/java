@@ -14,7 +14,7 @@
         <button onclick="btnAdd()">Thêm mới</button>
     </div>
     <div class="col-lg-10" style="display:flex;justify-content: right">
-        <input type="text" name="keyword" placeholder="Nhập vào tên cần tìm kiếm">
+        <input type="text" name="keyword" placeholder="Nhập vào tên cần tìm kiếm" th:value="${keyword}">
         <button style="font-size:12px" onclick="btnSearch()">Tìm kiếm</button>
     </div>
     <table class="table">
@@ -33,7 +33,7 @@
             <td th:text="${s.age}"></td>
             <td>
                 <button class="btn-warning" th:attr="onclick=|btnEdit('${s.id}')|">Sửa</button>
-                <button class="btn-danger">Xóa</button>
+                <button class="btn-danger" th:attr="onclick=|btnDelete('${s.id}')|">Xóa</button>
             </td>
         </tr>
         </tbody>
@@ -46,6 +46,12 @@
 
     function btnEdit(id) {
         window.location.href = "edit/" + id;
+    }
+
+    function btnDelete(id) {
+        if (confirm("Bạn có muốn xóa sinh viên này không?") == true) {
+            window.location.href = "delete/" + id;
+        }
     }
 
     function btnSearch() {
