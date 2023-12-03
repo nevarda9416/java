@@ -17,11 +17,12 @@ public class EmployeeService implements IEmployeeService {
     EmployeeRepository employeeRepository;
     @Autowired
     EmployeeMapper employeeMapper;
-@Autowired
-private AddressRepository addressRepository;
+    @Autowired
+    private AddressRepository addressRepository;
+
     @Override
     public List<EmployeeDTO> getAll() {
-        return employeeRepository.findAll().stream().map(e->employeeMapper.toDTO(e)).toList();
+        return employeeRepository.findAll().stream().map(e -> employeeMapper.toDTO(e)).toList();
     }
 
     @Override
